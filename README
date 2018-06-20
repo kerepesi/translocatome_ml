@@ -23,7 +23,7 @@ Running commands:
     
     $ python RuleTable.py GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv
 
-Data files: 
+Data files (in the 'Data' directory): 
 
   - GO_features_on_all_prots.csv:
     
@@ -45,7 +45,7 @@ Data files:
     
     Gene Ontology features for the training proteins 
 
-Results files:
+Results files (in the 'Results' directory):
 
   - GO_features.csv-imp-n_est80-list.csv:
     
