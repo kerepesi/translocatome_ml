@@ -13,7 +13,7 @@ if index_col=="0":
 else: 
     X_raw_first_raw = pd.read_csv(IN_name, sep=",", nrows=1)
     X_raw = pd.read_csv(IN_name, sep=",", usecols=list(range(1,len(X_raw_first_raw.columns))), dtype=np.float32)
-y = np.ravel(pd.read_csv("translocatome_labels_posneg_add.csv", usecols=[1], sep=",", dtype=np.float32))
+y = np.ravel(pd.read_csv("Data/translocatome_labels_posneg_add.csv", usecols=[1], sep=",", dtype=np.float32))
 X=X_raw.values
 
 thresholds = np.linspace(0.01, 0.99, 50)

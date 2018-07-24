@@ -3,7 +3,7 @@ import sys
 IN_name=sys.argv[1]
 
 stats={}
-f=open("GO_features.csv-imp-n_est80-list.csv")
+f=open("Results/GO_features.csv-imp-n_est80-list.csv")
 for l in f:
     sl=l.strip().split(";")
     stats[sl[0]]=sl
@@ -30,7 +30,9 @@ for l in f:
             d2[x]=0
         d2[x]+=float(leaf2)
 f.close()
-f=open(IN_name+"-RuleTable.py.csv","w")
+OUT_name=IN_name+"-RuleTable.py.csv"
+print(OUT_name)
+f=open(OUT_name,"w")
 for x in d1:
     if x in stats:
         f.write(",".join([x,stats[x][1],stats[x][2],str(d1[x]),str(d2[x]),str(d2[x]-d1[x])])+"\n")

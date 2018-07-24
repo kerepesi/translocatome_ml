@@ -13,15 +13,15 @@ Running commands:
 
   -- Running of 100 experiments of XGBoost with 5 fold CV (predictions are averaged, parameters: max_depth=1, n_est=80, lr=0.3, n_exp=100)
     
-     $ python XGBoost_CV.py 0 GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv
+     $ python3.5 XGBoost_CV.py 0 Results/GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv
 
   -- Dumping trees of the XGBoost model (max_d=1, n_est=80, lr=0.3):
     
-     $ python Tree.py GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv
+     $ python3.5 Tree.py Results/GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv
 
   -- Creating a simple model (rule table):
     
-     $ python RuleTable.py GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv
+     $ python3.5 RuleTable.py Results/GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv_Trees-n_est80-max_d1.txt
 
 Data files (in the 'Data' directory): 
 
@@ -49,7 +49,7 @@ Results files (in the 'Results' directory):
 
   -- GO_features.csv-imp-n_est80-list.csv:
     
-     Important features selected by XGBoost (n_est=80, threshold = 0)
+     Important features selected by XGBoost (n_est=80, threshold=0)
     
   -- GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv:
     
@@ -57,12 +57,12 @@ Results files (in the 'Results' directory):
 
   -- GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv_Trees-n_est80-max_d1.txt:
     
-     Output file of the command 'python Tree.py GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv'
+     Output file of the script "Tree.py" used the parameter settings detailed above
 
   -- GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv_Trees-n_est80-max_d1.txt-RuleTable.py.csv:
     
-     Output file of the command 'python RuleTable.py GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv_Trees-n_est80-max_d1.txt'
+     Output file of the script "RuleTable.py" used the parameter settings detailed above
 
  -- GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv-XGBoost_CV_preds-n_est80-exp100.csv:
     
-    Output file of the command 'python XGBoost_CV.py 1 GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv'
+     Output file of the script "XGBoost_CV.py" used the parameter settings detailed above

@@ -24,7 +24,7 @@ def dump_model(model,num_trees=None,output_file=None):
 IN_name=sys.argv[1]
 
 X_train = pd.read_csv(IN_name, dtype=np.float32)
-y_train=np.ravel(pd.read_csv("translocatome_labels_posneg_add.csv", usecols=[1], sep=",", dtype=np.float32))
+y_train=np.ravel(pd.read_csv("Data/translocatome_labels_posneg_add.csv", usecols=[1], sep=",", dtype=np.float32))
 
 n_est=80
 max_d=1
