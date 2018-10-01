@@ -63,6 +63,6 @@ Results files (in the 'Results' directory):
     
      Output file of the script "RuleTable.py" used the parameter settings detailed above
 
- -- GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv-XGBoost_CV_preds-n_est80-exp100.csv:
+  -- GO_features.csv-imp-n_est80-thr0.02-table.csv-add_degree_bridgeness.csv-XGBoost_CV_preds-n_est80-max_d1-lr0.3-exp100.csv:
     
      Output file of the script "XGBoost_CV.py" used the parameter settings detailed above

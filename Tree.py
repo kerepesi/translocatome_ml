@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from xgboost import XGBClassifier
+from sklearn.metrics import  roc_auc_score
 import sys
 
 def dump_model(model,num_trees=None,output_file=None):
@@ -29,7 +30,10 @@ y_train=np.ravel(pd.read_csv("Data/translocatome_labels_posneg_add.csv", usecols
 n_est=80
 max_d=1
 model = XGBClassifier(learning_rate=0.3, max_depth=max_d, nthread=20, n_estimators=n_est)
-model.fit(X_train, y_train)
+#model.fit(X_train, y_train)
+preds = model.fit(X_train, y_train).predict_proba(X_train)[:,1]
+auc=roc_auc_score(y_train, preds)
+print(auc)
 
 d={}
 imp_scores=list(model.feature_importances_)
